@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+
+  <table >
+    <tr>
+      <td colspan="4"> <input type="text" placeholder="0" id="display"/> </td>
+      
+    </tr>
+    <tr>
+      <td><button  onclick="getTheValue('7')">7</button></td>
+      <td><button onclick="getTheValue('8')" >8</button></td>
+      <td><button onclick="getTheValue('8')" >9</button></td>
+      <td><button onclick="getTheValue('/') ">&divide; </button></td>
+
+    </tr>
+    <tr>
+      <td><button onclick="getTheValue('4')" >4</button></td>
+      <td><button onclick="getTheValue('5')" >5</button></td>
+      <td><button onclick="getTheValue('6')" >6</button></td>
+      <td><button onclick="getTheValue('*')" > &times;</button></td>
+
+    </tr>
+    <tr>
+      <td><button onclick="getTheValue('1')" >1</button></td>
+      <td><button onclick="getTheValue('2')" >2</button></td>
+      <td><button onclick="getTheValue('3')" >3</button></td>
+      <td><button onclick="getTheValue('-')" >&minus;</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="getTheValue('0')" >0</button></td>
+      <td><button onclick="getTheValue('.')" >.</button></td>
+      <th><button onclick="getTheValue('+')" >&plus;</button></th>
+      <th><button onclick="result()">&equals;</button></th>
+    </tr>
+      </table>
+
+      <script>
+        function getTheValue(a){
+           
+            let inputField = document.getElementById('display');
+            inputField.value +=a ;
+            
+            // console.log(a);
+        };
+        function result(){
+            let inputField = document.getElementById('display');
+            return inputField.value = eval(inputField.value);
+        };
+      </script>
+
+
+</body>
+
+</html>
